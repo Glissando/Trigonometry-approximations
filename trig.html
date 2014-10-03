@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<title>Trig</title>
+		<link href="test.css" rel="stylesheet">
+	</head>
+	<body>
+		<input type="button" onclick="nativeSin()" >native</input>
+		<input type="button" onclick="mySin()">cubic</input>
+		<input type="textfield" id="input"></input>
+		<h1 id="text">Hello world</h1>
+		<script>
+			var halfPI = Math.PI/2;
+			var tau = Math.PI*2;
+			
+			function nativeSin(){				
+				document.getElementById('text').innerHTML = parseFloat(document.getElementById('input')) ? Math.sin(parseFloat(document.getElementById('input').value)) : 'Invalid input';
+			}
+			
+			function mySin(){
+				document.getElementById('text').innerHTML = parseFloat(document.getElementById('input')) ? sin(parseFloat(document.getElementById('input').value)) : 'Invalid input';
+			}
+			
+			function test(x){
+				if(sign(halfPI-x)){
+					console.log('1:true');
+				}
+				else if(sign(x-Math.PI)){
+					console.log('2:true');
+				}
+				else if(sign(x-3*halfPI)){
+					console.log('3:true');
+				}
+				else {
+					console.log('4:true');
+				}
+			}
+			function hill(x){
+				var pi = Math.PI;
+				var a0 = 1;
+				var a2 = 2 / pi - 12 / (pi*pi);
+				var a3 = 16 / (pi * pi * pi) - 4 / (pi*pi);
+				var xx = x*x;
+				var xxx = xx * x;
+				
+				return a0 + a2 * xx + a3 * xxx;
+			}
+			function sin(x){
+                x%=tau;
+                
+				if(x<halfPI)//halfPI-x
+					return hill(halfPI-x);
+				else if(x<Math.PI)
+					return hill(x-halfPI);
+				else if(x<3*halfPI)//3*halfPI
+					return -hill(3*halfPI-x);
+				else
+					return -hill(x-3*halfPI);
+			}
+			function asin(x){
+				return 1/sin(x);
+			}
+			function cos(x){
+				return sin(x+halfPi);
+			}
+			function acos(x){
+				return 1/cos(x);
+			}
+			function tan(x){
+				return sin(x)/cos(x);
+			}
+			function atan(x){
+				return 1/tan(x);
+			}
+		</script>
+	</body>
+</html>
