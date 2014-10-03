@@ -12,11 +12,11 @@
 			var tau = Math.PI*2;
 			
 			function nativeSin(){				
-				document.getElementById('text').innerHTML = parseFloat(document.getElementById('input')) ? 'Invalid input' :  Math.sin(parseFloat(document.getElementById('input').value));
+				document.getElementById('text').innerHTML = parseFloat(document.getElementById('input').value) ?  Math.sin(parseFloat(document.getElementById('input').value)) : 'Invalid input';
 			}
 			
 			function mySin(){
-				document.getElementById('text').innerHTML = parseFloat(document.getElementById('input')) ? 'Invalid input' : sin(parseFloat(document.getElementById('input').value)) ;
+				document.getElementById('text').innerHTML = parseFloat(document.getElementById('input').value) ? sin(parseFloat(document.getElementById('input').value)) : 'Invalid input';
 			}
 			
 			function test(x){
