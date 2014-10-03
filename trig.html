@@ -1,7 +1,6 @@
 <html>
 	<head>
 		<title>Trig</title>
-		<link href="test.css" rel="stylesheet">
 	</head>
 	<body>
 		<input type="button" onclick="nativeSin()" >native</input>
@@ -13,11 +12,11 @@
 			var tau = Math.PI*2;
 			
 			function nativeSin(){				
-				document.getElementById('text').innerHTML = parseFloat(document.getElementById('input')) ? Math.sin(parseFloat(document.getElementById('input').value)) : 'Invalid input';
+				document.getElementById('text').innerHTML = parseFloat(document.getElementById('input')) ? 'Invalid input' :  Math.sin(parseFloat(document.getElementById('input').value));
 			}
 			
 			function mySin(){
-				document.getElementById('text').innerHTML = parseFloat(document.getElementById('input')) ? sin(parseFloat(document.getElementById('input').value)) : 'Invalid input';
+				document.getElementById('text').innerHTML = parseFloat(document.getElementById('input')) ? 'Invalid input' : sin(parseFloat(document.getElementById('input').value)) ;
 			}
 			
 			function test(x){
