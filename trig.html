@@ -18,21 +18,6 @@
 			function mySin(){
 				document.getElementById('text').innerHTML = parseFloat(document.getElementById('input').value) ? sin(parseFloat(document.getElementById('input').value)) : 'Invalid input';
 			}
-			
-			function test(x){
-				if(sign(halfPI-x)){
-					console.log('1:true');
-				}
-				else if(sign(x-Math.PI)){
-					console.log('2:true');
-				}
-				else if(sign(x-3*halfPI)){
-					console.log('3:true');
-				}
-				else {
-					console.log('4:true');
-				}
-			}
 			function hill(x){
 				var pi = Math.PI;
 				var a0 = 1;
