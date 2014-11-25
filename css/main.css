@@ -1,0 +1,41 @@
+body,
+html{
+	min-height:100%;
+}
+
+body{
+	background-image:url(../img/background.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	font:6em "Orbitron", cursive;
+	font-size:72px;
+	color:rgb(50,200,50);
+	text-shadow:1px 1px 0 rgba(0,0,0,.2);
+	margin:40px;
+	text-align:center;
+}
+
+input[type="button"].button,
+button.button{
+	cursor:pointer;
+	outline:none;
+}
+
+.button:hover{
+	background:lightslategray;
+	
+}
+
+.button{
+	padding:8px 16px;
+	background:slategray;
+	display:inline-block;
+	text-decoration:none;
+	border-radius:3px;
+	border:0;
+	margin:0;
+}
+
+#text{
+	font-size:64;
+}
